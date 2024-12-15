@@ -1,6 +1,8 @@
 
 Highlights
+
 🚀 Introduction to Spring Boot project for Smart Contact Manager.
+
 📚 Learning the importance of foundational modules for bigger projects.
 🖥️ Features include user management, contact storage, and profile creation.
 🔒 Implementation of Spring Security for user login and authorization.
