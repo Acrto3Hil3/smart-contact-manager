@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>About Page</title>
 </head>
 
 <body>
-    <h2>About Page for the SCM</h2>
-
-    <div th:replace="~{base::parent(~{::p})}">
-
-        <p>dynamic data</p>
+    <div id="content">
+        <h1>About page content</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi impedit delectus cupiditate molestias ipsa saepe, consequatur facilis officia quod eveniet neque necessitatibus atque a cum.</p>
     </div>
 
-    <div th:replace="${isLogin} ? ~{base :: parent(~{::section})} : ~{base::test}">
-        <section>
-            <h2>Expression Dynamic content</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores voluptatibus, voluptas et modi
-                voluptatem vero quas pariatur eum. Mollitia odio veniam deleniti consequuntur repellat deserunt amet
-                nulla quam, doloribus delectus!</p>
-            <button>Random Content</button>
-        </section>
-    </div>
+    
 </body>
 
 </html>

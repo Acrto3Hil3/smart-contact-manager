@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Service Page for the SCM</h2>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
 
-    <div th:insert="~{base:: parent}" ></div>
+<head>
+    <title>Service Page</title>
+</head>
+
+<body>
+    <h2>Service Page</h2>
+    <div id="content">
+        <h2>Content for the Services page</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum repellendus, aspernatur reprehenderit dolorum est possimus reiciendis debitis consequatur eveniet quia exercitationem vel fugit mollitia numquam sint omnis molestias doloremque voluptate.</p>
+    </div>
 </body>
+
 </html>

@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="https://www.thymeleaf.org">
+<html class="light" lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="parent(content,title)">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <!-- dynamic css output -->
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+
+    <!-- flowbite cdn url -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
     
-    <div th:fragment="parent(content)">
-        <h2>Parent Fragment</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde qui adipisci ea magnam impedit laudantium distinctio eum id animi itaque!</p>
+    <!-- font awesome url -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        <h2>Another content in parent data</h2>
-        <div th:replace="${content}"></div>
+    <title data-th-replace="${title}">SCM</title>
+
+</head>
+
+<body class="dark:bg-gray-900 dark:text-white">
+    <!-- common header -->
+    <div data-th-replace="~{navbar::navbar}">
+
     </div>
-
-    <div th:fragment="test">
-        <h2>This is testing fragment</h2>
-        <button>Test</button>
+    <!-- main content -->
+     <div class="p-4"> 
+        <section data-th-replace="${content}"></section>
     </div>
+   
 
+    <!-- common footer -->
+    <footer>UtKarsh Soft Solution</footer>
+     
+    <!-- flowbite content -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+    <script data-th-src="@{'js/script.js'}"></script>
 </body>
+
 </html>
